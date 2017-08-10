@@ -1,0 +1,107 @@
+html {
+  height: 100%;
+  /*I haven't decided yet which gradient style is better*/
+  /*background: linear-gradient(to right, #aaa, #fff 50%, #aaa);*/
+  background: radial-gradient(#eee 50%, #aaa);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: helvetica;
+}
+
+h1 {
+  text-align: center;
+  font-size: 36px;
+}
+
+h3, p {
+  margin: 20px;
+  color: #fff;
+}
+
+.main {
+  width: 868px;
+  height: 432px;
+  background: #333;
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.button {
+  width: 50px;
+  height: 432px;
+  position: relative;
+  box-shadow: 2px 2px 4px 2px rgba(40, 40, 40, 0.6);
+  background: linear-gradient(#eee, #ccc);
+}
+
+.button:hover {
+  background: linear-gradient(#ccc, #eee);
+}
+
+.button:active {
+  box-shadow: inset 2px 2px 4px 2px rgba(40, 40, 40, 0.6);
+}
+
+.left {
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 25%;
+}
+
+.gallery {
+  position: relative;
+  width: 768px;
+  height: 432px;
+  background: blue;
+  box-shadow: 2px 2px 4px 2px rgba(40, 40, 40, 0.6);
+}
+
+.large {
+  width: 768px;
+  height: 432px;
+}
+
+.right {
+  position: absolute;
+  display: block;
+  margin: auto;
+  top: 50%;
+  left: 25%;
+  transform: scaleX(-1);
+}
+
+.description {
+  position: absolute;
+  bottom: 0;
+  height: 120px;
+  width: 768px;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.thumbnail {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.list {
+  width: 72px;
+  height: 72px;
+  margin: auto 10px;
+  background: red;
+  list-style: none;
+}
+
+.small {
+  width: 72px;
+  height: 72px;
+  object-fit: cover;
+  box-shadow: 5px 5px 4px 2px rgba(40, 40, 40, 0.6);
+  outline: 5px solid #eee;
+}
+
+.small:hover {
+    outline: 5px solid #555;
+}
