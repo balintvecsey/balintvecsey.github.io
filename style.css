@@ -1,8 +1,13 @@
+/*van Gogh color palette {
+  sunflowers: #ffce00;
+  starry night: #0375b4;
+  irises: #007849;
+  evening: #262228;
+}*/
+
 html {
   height: 100%;
-  /*I haven't decided yet which gradient style is better*/
-  /*background: linear-gradient(to right, #aaa, #fff 50%, #aaa);*/
-  background: radial-gradient(#eee 50%, #aaa);
+  background: radial-gradient(#007849 85%, #262228);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -11,10 +16,13 @@ html {
 
 h1 {
   text-align: center;
-  font-size: 36px;
+  font-size: 56px;
+  color: #ffce00;
+  margin: 12px auto;
+  text-shadow: 1px 1px 2px rgba(40, 40, 40, 0.6);
 }
 
-h3, p {
+h2, p {
   margin: 20px;
   color: #fff;
 }
@@ -25,29 +33,35 @@ h3, p {
   background: #333;
   display: flex;
   flex-flow: row nowrap;
+  box-shadow: 2px 2px 4px 2px rgba(40, 40, 40, 0.6);
 }
 
 .button {
   width: 50px;
-  height: 432px;
-  position: relative;
-  box-shadow: 2px 2px 4px 2px rgba(40, 40, 40, 0.6);
-  background: linear-gradient(#eee, #ccc);
+  height: 100%;
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url('assets/arrow.svg') no-repeat center, linear-gradient(#ffdb4d, #ffce00);
 }
 
 .button:hover {
-  background: linear-gradient(#ccc, #eee);
+  background: url('assets/arrow.svg') no-repeat center, linear-gradient(#ffce00, #ffdb4d);
 }
 
 .button:active {
+  background: url('assets/arrow-active.svg') no-repeat center, linear-gradient(#ffce00, #ffdb4d);
   box-shadow: inset 2px 2px 4px 2px rgba(40, 40, 40, 0.6);
 }
 
-.left {
-  position: absolute;
-  display: block;
-  top: 50%;
-  left: 25%;
+.right {
+  transform: scaleX(-1);
+}
+
+.right:active {
+  box-shadow: inset -2px 2px 4px 2px rgba(40, 40, 40, 0.6);
 }
 
 .gallery {
@@ -55,7 +69,6 @@ h3, p {
   width: 768px;
   height: 432px;
   background: blue;
-  box-shadow: 2px 2px 4px 2px rgba(40, 40, 40, 0.6);
 }
 
 .large {
@@ -63,21 +76,12 @@ h3, p {
   height: 432px;
 }
 
-.right {
-  position: absolute;
-  display: block;
-  margin: auto;
-  top: 50%;
-  left: 25%;
-  transform: scaleX(-1);
-}
-
 .description {
   position: absolute;
   bottom: 0;
   height: 120px;
   width: 768px;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(38, 34, 40, 0.8);
 }
 
 .thumbnail {
@@ -98,10 +102,15 @@ h3, p {
   width: 72px;
   height: 72px;
   object-fit: cover;
+  cursor: pointer;
   box-shadow: 5px 5px 4px 2px rgba(40, 40, 40, 0.6);
-  outline: 5px solid #eee;
+  outline: 5px solid #aaa;
 }
 
 .small:hover {
-    outline: 5px solid #555;
+  outline: 5px solid #ffce00;
 }
+
+/*#active {
+  outline: 5px solid #ffdb4d;
+}*/
